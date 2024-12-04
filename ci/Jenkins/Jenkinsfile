@@ -29,13 +29,13 @@ pipeline {
     stage('Docker Login') {
       steps {
         script {
-          sh 'docker login -u "feryelbenalaya0" -p "fery@2801"'
+          sh 'docker login -u "feryel28" -p "fery@2801"'
         }
       }
     }
     stage('Build and Push Docker Image') {
       environment {
-        DOCKER_IMAGE = "feryelbenalaya0/demo-java-app:${build_version}"
+        DOCKER_IMAGE = "feryel28/demo-java-app:${build_version}"
       }
       steps {
         script {
